@@ -1,0 +1,411 @@
+@font-face {
+  font-family: Azonix;
+  src: url(fonts/Azonix.otf);
+}
+@-webkit-font-face {
+  font-family: Azonix;
+  src: url(fonts/Azonix.otf);
+}
+
+body{
+    margin: 0;
+    user-select: text;
+    background-color: #333;
+    display: grid;
+	place-items: center;
+    font-family: Azonix, arial;
+    color: lime;
+    
+}
+.load{
+    transition: none !important;
+}
+*::selection{
+    background-color: transparent;
+    color: aqua;
+    text-shadow: 0px 0px 10px aqua, 0px 0px 3px black;
+}
+#menu{
+    list-style:none;
+    padding-left:0;
+    width: 450px;
+    margin-left: calc(50% - 225px) ;   
+
+}
+a{
+    text-decoration:none;
+    color: inherit;
+    text-align: center;
+/*    display: block;*/
+/*    transition:  0.1s;*/
+    
+}
+.link{
+    text-shadow: 0px 0px 5px black, 0px 0px 10px limegreen, 0px 0px 5px white;
+}
+.link:hover{
+    color: aqua;
+    text-shadow: 0px 0px 5px black, 0px 0px 15px aqua, 0px 0px 10px white;
+}
+label{
+    display: block;
+    margin: 5px 5px;
+}
+input{
+    background-color: #444;
+    font-family: Azonix;
+    color: lime;
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid lime;
+    border-radius: 5px;
+    text-shadow: 0px 0px 3px #333;
+}
+.input{
+    font-size: 100%;    
+    transition: 200ms;
+    box-shadow: inset 0 0 5px 1px lime, 0 0 0px 0px lime;
+    
+    
+}
+/*.input::selection{   
+    
+    background-color: transparent;
+    color: aqua;
+    text-shadow: 0px 0px 10px aqua, 0px 0px 3px black;
+}*/
+input:focus, .submit:hover{
+    box-shadow:inset 0 0 0px 0px lime, 0 0 10px 2px lime;
+}
+.zleDane{
+    box-shadow:inset 0 0 0px 0px lime, 0 0 10px 2px red !important;
+
+}
+#nazwa{
+    width: 250px
+}
+.contener{
+    min-width: 600px;
+    text-align: center;
+    box-shadow: inset 0 0 10px lime;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 5px;
+    font-size: 30px;
+    margin: 40px;
+    
+}
+.contener::selection{
+    
+    background-color: transparent;
+    color: aqua;
+    text-shadow: 0px 0px 10px aqua, 0px 0px 3px black;
+}
+.contener#zapiszWynik{
+    margin-top: 100px;
+}
+#zapiszWynik span{
+    text-shadow: 0px 0px 7px lime, 0px 0px 5px black;
+} 
+p{
+    margin: 5px;
+}
+.submit{
+    height: 40px;
+    width: 100px;
+    user-select: none;
+    font-size: 18px;
+    border: 2px solid lime;
+    border-radius: 5px;
+    box-shadow:inset 0 0 4px 1px #333, 0 0 0px 0px lime;
+    cursor: pointer;
+    transition: 200ms;
+}
+.submit:active{
+    box-shadow:inset 0 0 2px 1px lime, 0 0 0px 0px lime;
+}
+
+.select{
+    
+    color: limegreen;
+    height: 60px;
+    width: 400px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+    margin: 15px;
+    border: 5px solid limegreen;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 3px lime, 0 0 0px 0px lime;
+    cursor: pointer;
+/*    transition: color 200ms, transform 200ms, text-shadow 200ms, box-shadow 200ms;*/
+    transition: 200ms;
+    font-family: Azonix;
+    
+    /*text-shadow: 0px 0px 10px limegreen, 0px 0px 20px white;*/
+    
+}
+.select:hover{
+    
+    color: #a3ffa3;
+    transform: scale(1.02);
+    text-shadow: 0px 0px 15px limegreen, 0px 0px 5px white;
+    box-shadow: inset 0 0 5px 1px #333, 0 0 10px 3px lime;
+    
+}
+.select a{
+    display: block;
+}
+.disabled{
+    color: #444;
+    text-shadow: 0px 0px 15px lightslategray;
+    
+}
+.disabled *{
+    cursor: not-allowed;
+}
+.disabled:hover{
+    color: #444;
+    text-shadow: 0px 0px 15px lightslategray;
+    
+}
+
+/*----------Wyniki---------*/
+
+
+
+.place{
+    width: 75%;
+    margin: 20px auto;
+    border: 2px solid lime;
+    border-radius: 10px;    
+    overflow: hidden;
+    position: relative;
+    background-position: 20px ;
+     background-image: linear-gradient(to right, #4b4b4b, #121212 ,#4b4b4b);
+/*    background-color: #fff;*/
+    
+}
+
+/*----------Pierwsze 3 miejsca-------*/
+
+.place:nth-child(1){
+    transform: scale(1.3);
+    margin-bottom: 40px;
+    
+
+}
+.place:nth-child(1) .info{
+    background-image: linear-gradient(to right,lime ,#f7e404 ,#f77404 ,#f71704 ,#f704ac ,#7404f7 ,#2d1ee8 ,#047df7 ,#04e4f7 ,#04f7ac ,lime );
+    background-size: 1000px auto;
+   
+    background-position: 0 0;
+    
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+/*    transition: background-position 0.5s;*/
+    animation: ruch 3s linear 0s infinite;
+}
+.place:nth-child(2){
+    transform: scale(1.2);
+    margin-bottom: 30px;
+
+
+}
+.place:nth-child(3){
+    transform: scale(1.1);
+    margin-bottom: 20px;
+
+
+}
+@keyframes ruch{
+    0%{ background-position: 0 0; }
+    100%{ background-position: 1000px 0; }
+    
+    
+}
+
+.place .number{
+/*    background-color: ;*/
+/*    overflow: hidden;*/
+    height: 60px;
+    width: 15%;
+    float: left;
+    font-size: 60px;
+    border-right: 2px solid lime;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 3px 0 55px 10px;
+    filter:none; 
+    background-image: linear-gradient(to right, #4b4b4b, #222222 30% 70%,#4b4b4b);
+}
+.place .info{
+    
+/*    outline: 3px solid pink;*/
+    
+    width: 100%;
+    height: 60px;
+    filter: none;
+    
+}
+.place span{
+    display: block;
+    
+}
+.place span:first-child{
+/*    background-color: red;*/
+    
+    height: calc(60% - 4px);
+    font-size: 35px;
+    padding: 2px;
+    
+/*    filter: blur(10px);*/
+}
+
+.place span:last-child{
+/*    background-color: blue;*/
+    
+    height: calc(40% - 4px);
+    font-size: 20px;
+    padding: 2px;
+    
+}
+.place span:last-child::after{
+    content: " pkt.";
+    font-size: 15px; 
+}
+
+/*---------pwrot do menu---------*/
+
+.powrot{
+    border: 2px solid lime;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    left: 100px;
+    bottom: 100px;
+    margin: 50px;
+    margin: 20px;
+    background-color: #333;
+    
+    box-shadow:inset 0 0 10px 0px lime, 0 0 0px 0px lime;
+    cursor: pointer;
+    transition: 200ms;
+    
+     
+    
+    
+    
+}
+
+.powrot:hover{
+     box-shadow:inset 0 0 0px 0px lime,0 0 15px 0px lime;
+}
+
+
+
+.powrot a{
+    display: block;
+}
+.powrot img{
+    height: 100%;
+    width: 100%;
+    
+}
+
+/*------------alert---------*/
+
+.alert{
+    position: absolute;
+    font-family: arial;
+    font-size: 15px;
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px black;
+    padding: 10px;
+    width: 300px;
+    transform: translate(420px,-90px);
+    display:none;
+}
+@media only screen and (max-width: 799px) {
+  .alert{
+/*      background-color: red;*/
+      width: 150px;
+    transform: translate(0px,-150px);
+  }
+}
+
+/*------------------jak grac-------------------*/
+.section{
+    margin-bottom: 20px;
+    padding: 10px 5px;
+    line-height: 25px;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black;
+    font-family: arial;
+    width: 800px;
+    border-radius: 10px;
+/*
+    border-bottom: 0px solid lime;
+    border-top: 2px solid lime;
+*/
+    box-shadow: inset 0px 8px 10px -10px lime,  0px 7px 10px -10px black, inset 0px -8px 10px -10px lime;
+    
+    
+}
+.section:last-child{margin-bottom: 0;}
+
+.header{
+    margin: 15px;
+    font-size: 40px;
+    color: lime;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px limegreen, 0px 0px 5px white;
+}
+.miniaturka{
+    height: 15px;
+}
+.myslniki{
+    text-align: left;
+    list-style: square;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+    body{
+        margin: 20px;
+    }
+  .contener{
+/*      background-color: red;*/
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-shadow: none;
+    
+    
+  }
+    .section{
+        width: auto;
+        font-weight: bold;
+    }
+    
+    
+}
+@media only screen and (max-width: 1200px) {
+    .powrot{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 0px;
+    }
+}

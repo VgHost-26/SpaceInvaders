@@ -1,0 +1,73 @@
+<!DOCTYPE html5>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6"> 
+    <title>Space Invaders</title>
+
+    <link rel="stylesheet" href="style/style.css">
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="contener">
+       <div class="section">
+           <div class="header">CEL GRY</div>
+           
+           To [ <img class="miniaturka" src="gra/grafiki/statek.png" > ] jesteś Ty, a celem gry jest wyeliminowanie wszystkich przeciwników [ <img class="miniaturka" src="gra/grafiki/invader.svg"> ] i zdobycie przy tym jak największej ilości punktów, a jednocześnie samemu nie dać się wyeliminować.
+           
+       </div>
+       <div class="section">
+            <div class="header">STEROWANIE</div>
+           
+            Sterowanie odbywa się za pomocą myszy, twój statek będzie     automatycznie śledził kursor myszy ale tylko w osi poziomej. Gdyby zdażyło Ci się wyjechać poza pole gry, włączy się automatyczna pauza która zatrzyma grę do momentu gdy wrócisz na pole gry(będziesz to mógł zmienic w ustawieniach) 
+           
+       </div>
+       <div class="section">
+           <div class="header">INFORMACJE</div>
+           
+           Z prawej strony ekranu umieszczne są tablice z następującymi informacjami:
+            <ul class="myslniki">
+                <li>ilość pozostałych żyć</li>
+                <li>ilość trafionych przeciwników w aktualnej rundzie</li>
+                <li>ilość pozostałych przeciwników w aktualnej rundzie</li>
+                <li>zdobyte punkty</li>
+                <li>aktualna runda</li>
+            </ul>
+           
+       </div>
+       <div class="section">
+           <div class="header">PUNKTY</div>
+           
+           Za każdego trafionego przeciwnika otrzymujesz 10pkt. Co piątego trafionego z rzędu (tzn. żaden pocisk nie przeleciał bez trafienia oraz nie zostałeś trafiony) zwiększasz swój mnożnik o 1 do maksymalnie X razy (narazie nie ma maxa).
+           
+       </div>
+       <div class="section">
+           <div class="header">KONIEC GRY</div>
+           
+           (narazie) Gra kończy się wraz z utratą wszystkich żyć, a aktualny zdobyty wynik zostaje zapisany  
+           
+       </div>
+       <div class="section">
+           <div class="header">WYNIKI</div>
+           
+           Po skończeniu gry należy podać swoją nazwe (nick) aby zapisać swój wynik, gdy gracz poda nazwę która juz istnieje w bazie, a wynik będzie wyższy niż aktualny przypisany do tej samej nazwy, zosatnie on zaktualizowany. W sekcji <a class="link" href="wyniki.php">wyniki</a> znajduje się 10 najlepszych graczy.  
+           
+       </div>
+       
+       <div class="powrot">
+            <a href="index.html"><img src="style/grafiki/back4.png" alt="Wróc do menu"></a>
+        </div>
+        
+    </div>
+    
+    
+   
+</body></html>

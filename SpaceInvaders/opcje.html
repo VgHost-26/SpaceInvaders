@@ -1,0 +1,75 @@
+<!DOCTYPE html5>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6"> 
+    <title>Space Invaders</title>
+
+    <link rel="stylesheet" href="style/style.css">
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="contener">
+        <div class="section">
+            <div class="header">Wygląd</div>
+            
+        </div>
+        <div class="section">
+            <div class="header">Sterowanie</div>
+            <label class="label">
+              Automatyczna pauza
+              <input  type="checkbox" class="settings checkbox" value="autoPause">
+              
+            </label>
+            
+        </div>
+        <div class="section">
+            <div class="header">Dostępność</div>
+            
+            <div>
+             Ślepota barw
+              <label class="label"> Protanopia <input  type="radio" class="settings radio" name="colorBlind" value="Protanopia"></label>
+              <label class="label"> Deuteranopia <input  type="radio" class="settings radio" name="colorBlind" value="Deuteranopia"></label>
+              <label class="label"> Tritanopia <input  type="radio" class="settings radio" name="colorBlind" value="Tritanopia"></label>
+              <label class="label"> Achromatopsia <input  type="radio" class="settings radio" name="colorBlind" value="Achromatopsia"></label>
+              <label class="label"> Brak <input checked type="radio" class="settings radio" name="colorBlind" value="none"></label>
+            </div>
+        </div>
+        <input id="save" type="submit" class="submit" value="zapisz" />
+        
+        <input id="reset" type="reset" class="submit" value="reset" />
+    </div>
+    
+    
+    <script>
+        const checkboxes = document.getElementsByClassName("settings");
+        let settings = "";
+        
+        document.getElementById("reset").addEventListener("click",reset);
+        document.getElementById("save").addEventListener("click",save);
+        
+        function save(){
+            settings = "";
+            for(let i=0; i < checkboxes.length; i++){
+                settings += checkboxes[i].value + " = " + checkboxes[i].checked + "; ";
+            }
+            
+            window.localStorage.setItem("settings",settings);
+            console.log(settings);
+        }
+        
+        function reset(){
+             settings = "";
+             window.localStorage.removeItem("settings");
+        }
+       
+    </script>
+</body></html>

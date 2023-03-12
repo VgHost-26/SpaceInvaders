@@ -1,0 +1,100 @@
+<!DOCTYPE html5>
+
+<html onkeydown="alert(event.keyCode)">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7"> 
+    <title>Space Invaders</title>
+
+    <link rel="stylesheet" href="gra/style.css">
+
+
+
+
+
+
+</head>
+
+<body  onresize="resize()">
+    <div  id="calosc">
+       
+        <div  onmousedown="strzal()" onmousemove="pozycja()" onmouseout="pauza=true; pauzaF()" onmouseover="pauza=false; pauzaF();" id="pole">
+            <div id="statek"><img id="statekImg" src="gra/grafiki/statek.png" ></div>
+            <div id="invaders">
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                <div class="invader"></div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    <div id="info">
+        <label><span>Zycia:</span> <input id="zycie" type="text" value="3" disabled/></label>
+        <label> <span>Trafieni: </span><input id="traf" type="text" value="0" disabled/></label>
+        <label> <span>Pozostalo: </span><input id="zostalo" type="text" value="55" disabled/></label>
+        <label><span>Punkty:</span> <input id="punktyI" type="text" value="0" disabled/></label>
+        <label><span>Runda:</span> <input id="rundaI" type="text" value="1" disabled/></label>
+    </div>
+    <!--input  id="test" type="text"/><br>
+    <input  id="test2" type="text"/><br>
+    <input  id="test4" type="text"/><br>
+    <input  id="test3" type="text"/-->
+    <script src="gra/script.js"> </script>
+</body></html>
